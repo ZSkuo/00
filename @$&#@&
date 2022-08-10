@@ -1,0 +1,201 @@
+local TeleportService = game:GetService("TeleportService")
+if game.PlaceId == 455366377 then
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('If you inject this in the streets, you will be banned!',"All")
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Teleporting you to the prison! (You wont be banned)',"All")
+wait(3)
+TeleportService:Teleport(4669040, game.Players.LocalPlayer)
+
+end
+
+
+
+wait(0.4)
+equippedshotguns = false
+local epic = Instance.new("Tool")
+local dab = Instance.new("Part")
+local plr = game.Players.LocalPlayer
+local tar_obj = nil
+dab.Parent = epic
+dab.Size = Vector3.new(0.2, 0.2, 0.2)
+dab.Transparency = 1
+epic.Parent = plr.Backpack
+epic.Name = "Shottys"
+epic.ToolTip = "Click to shoot Shottys."
+epic.ManualActivationOnly = false
+dab.Name = "Handle"
+local mousey = game.Players.LocalPlayer:GetMouse()
+
+
+epic.Equipped:Connect(function(m_S)
+
+
+
+
+
+for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Shotty" then
+v.ManualActivationOnly = true
+end
+end
+
+wait(0.1)
+
+for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Shotty" then
+v.Parent = game.Players.LocalPlayer.Character
+end
+end
+for _,v in pairs(game.Players.LocalPlayer:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Shotty" then
+v.Parent = game.Players.LocalPlayer.Character
+end
+end
+equippedshotguns = true    
+
+
+mousey.Button1Down:Connect(function()
+if equippedshotguns == true then
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Shotty" then
+v:Activate()
+end
+end
+end
+
+    
+end)
+
+epic.Unequipped:Connect(function(m_S)
+equippedshotguns = false
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Shotty" then
+v.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+end)
+
+
+end)
+
+
+
+
+
+
+
+
+wait(0.4)
+equippedglocks = false
+local epic = Instance.new("Tool")
+local dab = Instance.new("Part")
+local plr = game.Players.LocalPlayer
+local tar_obj = nil
+dab.Parent = epic
+dab.Size = Vector3.new(0.2, 0.2, 0.2)
+dab.Transparency = 1
+epic.Parent = plr.Backpack
+epic.Name = "Glocks"
+epic.ToolTip = "Click to shoot Glocks."
+epic.ManualActivationOnly = false
+dab.Name = "Handle"
+local mousey = game.Players.LocalPlayer:GetMouse()
+
+
+epic.Equipped:Connect(function(m_S)
+
+
+
+
+
+for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Glock" then
+v.ManualActivationOnly = true
+end
+end
+
+wait(0.1)
+
+for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Glock" then
+v.Parent = game.Players.LocalPlayer.Character
+end
+end
+for _,v in pairs(game.Players.LocalPlayer:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Glock" then
+v.Parent = game.Players.LocalPlayer.Character
+end
+end
+equippedglocks = true    
+
+
+mousey.Button1Down:Connect(function()
+if equippedglocks == true then
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Glock" then
+v:Activate()
+wait(0.1)
+end
+end
+end
+
+    
+end)
+
+epic.Unequipped:Connect(function(m_S)
+equippedglocks = false
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Tool")) and v.Name == "Glock" then
+v.Parent = game.Players.LocalPlayer.Backpack
+end
+end
+end)
+
+
+end)
+
+
+
+
+--Notif
+local function callback(Text)
+    if Text == "Ok" then
+     print ("")
+   elseif Text == ("") then
+    print ("")
+    end
+   end
+   
+   local NotificationBindable = Instance.new("BindableFunction")
+   NotificationBindable.OnInvoke = callback
+   --
+   game.StarterGui:SetCore("SendNotification",  {
+    Title = "BFG For Yev Remake";
+    Text = "Its not hard 2 use just dont be dumb lmao.";
+    Icon = "http://www.roblox.com/asset/?id=10546566028";
+    Duration = 11;
+    Button1 = "Ok";
+    Button2 = "";
+    Callback = NotificationBindable;
+   })
+   
+
+   local function callback(Text)
+    if Text == "Ok" then
+     print ("")
+   elseif Text == ("") then
+    print ("")
+    end
+   end
+   
+   local NotificationBindable = Instance.new("BindableFunction")
+   NotificationBindable.OnInvoke = callback
+   --
+   game.StarterGui:SetCore("SendNotification",  {
+    Title = "Enjoy annoying retards lmfao";
+    Text = "CREDITS TO WHO MADE IT I JUST EDITED IT 2 WORK";
+    Icon = "http://www.roblox.com/asset/?id=10546566028";
+    Duration = 11;
+    Button1 = "Ok";
+    Button2 = "";
+    Callback = NotificationBindable;
+   })
